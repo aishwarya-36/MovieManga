@@ -20,5 +20,5 @@
 }
 
 body {
-  @apply dark:bg-[#24273a] dark:text-[#cdd6f4] bg-[#fffdfb] text-[#4c4769];
+  @apply dark:bg-[#24273a] dark:text-[#cdd6f4] bg-[#fff5ee] text-[#8b4513];
 }

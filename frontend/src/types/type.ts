@@ -17,6 +17,7 @@ export type MovieData = {
   Actors: string;
   Director: string;
   Source: string;
+  Runtime: string;
 };
 
 export type ModalProps = {

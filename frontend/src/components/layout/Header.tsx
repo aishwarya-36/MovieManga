@@ -14,11 +14,11 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full  dark:bg-[#1e2233] dark:text-[#cdd6f4] bg-[#f4f0ec] text-[#4c4769] shadow-md">
+    <header className="sticky top-0 z-50 w-full  dark:bg-[#1e2233] dark:text-[#cdd6f4]  bg-[#f8f4ff] text-[#6b5b95] shadow-md">
       <div className="w-[90%] mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
         <Link to="/" className="flex items-center">
           <img src="/site-logo.svg" alt="Logo" className="h-8 w-auto" />
-          <p className="ml-4">Movie App</p>
+          <h1 className="ml-4 font-bold font-sans text-3xl">Movie App</h1>
         </Link>
         <button
           onClick={handleToggle}
