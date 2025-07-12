@@ -1,11 +1,14 @@
 import React, {useState } from "react";
 import Footer from "../layout/Footer";
 import Header from "../layout/Header";
+import useDebounce from "../hooks/useDebounce";
 import SearchInput from "../SearchInput";
 import MovieGrid from "../MovieGrid";
 
 const Home: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
+  const debouncedSearchTerm = useDebounce(searchTerm, 500);
+ 
   let refreshKey:number = 0;
 
   const onSearchInputChange = (value: string) => {
@@ -19,7 +22,7 @@ const Home: React.FC = () => {
           <SearchInput value={searchTerm} onChange={onSearchInputChange} />
         </div>
         <div className="mt-10">
-          <MovieGrid key={refreshKey} searchTerm={searchTerm} />
+          <MovieGrid key={refreshKey} searchTerm={debouncedSearchTerm} />
         </div>
       </main>
       <Footer />
